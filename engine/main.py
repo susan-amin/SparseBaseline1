@@ -131,7 +131,14 @@ parser.add_argument('-w','--w_figar', type=int, default=10,
 
 parser.add_argument('--epsilon_figar', type=float, default=0.5)
 
-# *********************************** SAC_Poly_Rl Setting ********************************************
+# *********************************** OAC Setting ********************************************
+
+parser.add_argument("--beta_UB_OAC", default=4.66, type=float)
+
+parser.add_argument("--delta_OAC", default=23.53, type=float)
+
+
+
 args = parser.parse_args()
 
 # sets the seed for making it comparable with other implementations
