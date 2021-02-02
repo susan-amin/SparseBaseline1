@@ -70,7 +70,6 @@ class Figar(DDPG_Ou_Noise):
         state = torch.Tensor(state.reshape(1, -1)).to(self.device)
         action1= self.actor_target(state).cpu().data.numpy().flatten()
         action2= self.actor_repeat(state).cpu().data.numpy().item()
-        print("action2_Target: ", action2)
         return (action1,action2)
 
     def train(self, replay_buffer, step_number, batch_size=64, gamma=0.99, writer=None, **kwargs):
