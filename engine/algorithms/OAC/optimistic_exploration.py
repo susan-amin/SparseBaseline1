@@ -6,7 +6,8 @@ import numpy as np
 
 
 def get_optimistic_exploration_action(ob_np, std,mean, critic,qfs=None, hyper_params=None):
-    assert ob_np.ndim == 1
+    # assert ob_np.ndim == 1
+    assert ob_np.dim() == 1
 
     beta_UB = hyper_params['beta_UB']
     delta = hyper_params['delta']
