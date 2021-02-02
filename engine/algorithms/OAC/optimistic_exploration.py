@@ -12,7 +12,7 @@ def get_optimistic_exploration_action(ob_np, std,mean, critic,qfs=None, hyper_pa
     beta_UB = hyper_params['beta_UB']
     delta = hyper_params['delta']
 
-    ob = ptu.from_numpy(ob_np.numpy())
+    ob = ptu.from_numpy(ob_np.cpu().numpy())
 
     # Ensure that ob is not batched
     assert len(list(ob.shape)) == 1
