@@ -22,7 +22,8 @@ class OAC(SAC):
         hyper_params = {'beta_UB': self.beta_UB,
                         'delta': self.delta}
         state = torch.Tensor(state).reshape(1, -1).to(self.device)
-        mean, log_std = self.policy(torch.Tensor(state))
+        # mean, log_std = self.policy(torch.Tensor(state))
+        mean, log_std = self.policy(state)
         std = log_std.exp()
         self.counter_actions += 1
         action, _, _ = self.policy.sample(state.to(self.device))
