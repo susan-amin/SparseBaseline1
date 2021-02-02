@@ -89,6 +89,7 @@ class Figar(DDPG_Ou_Noise):
         #     nextact2 = nextact2.type(torch.cuda.FloatTensor)
         # else:
         #     nextact2 = nextact2.type(torch.FloatTensor)
+        nextact2 = nextact2.to(dtype = torch.float)
         concat_act=torch.cat([next_act1, torch.unsqueeze(nextact2, 1)], dim=1)
         # Compute the target Q value
         target_Q = self.critic_target(next_state, concat_act)
@@ -113,6 +114,7 @@ class Figar(DDPG_Ou_Noise):
         #     act2 = act2.type(torch.cuda.FloatTensor)
         # else:
         #     act2 = act2.type(torch.FloatTensor)
+        act2 = act2.to(dtype = torch.float)
         concat_act3=torch.cat((act1,torch.unsqueeze(act2, 1)),dim=1)
         actor_loss = -self.critic(state, concat_act3).mean()
 
