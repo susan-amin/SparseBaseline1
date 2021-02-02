@@ -60,13 +60,13 @@ class Run_RL():
             if(self.agent.__class__.__name__ is not "Figar"):
                 next_state, reward, done, info_ = self.env.step(action)
             else:
-                total_reward=0
+                total_fig_reward=0
                 for intra_step in range(action[1]):
                     next_state, reward, done, info_ = self.env.step(action[0])
-                    total_reward+=self.gamma**(intra_step)*reward
+                    total_fig_reward+=self.gamma**(intra_step)*reward
                     if(done):
                         break
-                reward=total_reward
+                reward=total_fig_reward
             post_update_agent(agent=self.agent, previous_state=states[-1], next_state=next_state,
                               done=done, step_number=step_number, writer=writer)
             if (done):

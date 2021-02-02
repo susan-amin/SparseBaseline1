@@ -123,8 +123,13 @@ parser.add_argument('--start_steps', type=int, default=10000,
 
 parser.add_argument('--automatic_entropy_tuning', action='store_true',
                     help='for making reward sparse. Default=False')
+
+# *********************************** Figar Setting ********************************************
+
 parser.add_argument('-w','--w_figar', type=int, default=10,
                     help='FIGAR length of repetition')
+
+parser.add_argument('--epsilon_figar', type=float, default=0.5)
 
 # *********************************** SAC_Poly_Rl Setting ********************************************
 args = parser.parse_args()

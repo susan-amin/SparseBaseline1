@@ -66,7 +66,8 @@ def get_agent_type(state_dim, action_dim, max_action, args, env, device):
         memory = ReplayBuffer(args.buffer_size)
         agent = Figar(state_dim, action_dim, max_action, expl_noise=args.expl_noise,
                      action_high=env.action_space.high, action_low=env.action_space.low, tau=args.tau,
-                     device=device, lr_actor=args.lr_actor, W=args.w_figar)
+                     device=device, lr_actor=args.lr_actor, noise_scale=args.noise_scale,
+                              num_steps=args.num_steps,final_noise_scale=args.final_noise_scale, W=args.w_figar, epsilon_figar = args.epsilon_figar)
     else:
         logger.info("Algorithm {} has not yet implemented! please select among 'DDPG, PARAM_DDPG, POLYRL_DDPG, DIV_DDPG'".format(args.algo))
         raise NotImplementedError
@@ -82,6 +83,9 @@ def select_action_agent(state, previous_action, tensor_board_writer
     elif(type(agent).__name__ == "SAC_Poly_RL"):
         return agent.mod_select_action(state, tensor_board_writer=tensor_board_writer, previous_action=previous_action,
                                    step_number=step_number, nb_environment_reset=nb_environment_reset)
+    elif (type(agent).__name__ == "Figar"):
+        return agent.select_action(state, tensor_board_writer=tensor_board_writer, previous_action=previous_action,
+                                       step_number=step_number)
     else:
         return agent.select_action(state, tensor_board_writer=tensor_board_writer, step_number=step_number)
 
