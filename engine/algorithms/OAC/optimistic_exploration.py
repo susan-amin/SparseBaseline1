@@ -28,8 +28,7 @@ def get_optimistic_exploration_action(ob_np, std,mean, critic,qfs=None, hyper_pa
     tanh_mu_T = torch.tanh(pre_tanh_mu_T)
 
     # Get the upper bound of the Q estimate
-    args = list(torch.unsqueeze(i, dim=0) for i in (ob, tanh_mu_T))
-    args = args.to(device = device)
+    args = list(torch.unsqueeze(i, dim=0).to(device = device) for i in (ob, tanh_mu_T))
     Q1,Q2 = critic(*args)
 
     mu_Q = (Q1 + Q2) / 2.0
