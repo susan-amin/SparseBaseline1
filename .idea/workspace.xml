@@ -3,9 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="5acc3d49-96ae-4eb6-8d00-5677bf241615" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/algorithms/OAC/oac.py" beforeDir="false" afterPath="$PROJECT_DIR$/engine/algorithms/OAC/oac.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/algorithms/OAC/optimistic_exploration.py" beforeDir="false" afterPath="$PROJECT_DIR$/engine/algorithms/OAC/optimistic_exploration.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/algorithms/SAC/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/engine/algorithms/SAC/model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/algorithms/DDPG_OU_NOISE/ddpg_ou_noise.py" beforeDir="false" afterPath="$PROJECT_DIR$/engine/algorithms/DDPG_OU_NOISE/ddpg_ou_noise.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/algorithms/FIGAR/figar.py" beforeDir="false" afterPath="$PROJECT_DIR$/engine/algorithms/FIGAR/figar.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs/func_graph.py" beforeDir="false" afterPath="$PROJECT_DIR$/graphs/func_graph.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs/multi_graphs.py" beforeDir="false" afterPath="$PROJECT_DIR$/graphs/multi_graphs.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,7 +52,29 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.main">
+    <configuration name="graph" type="PythonConfigurationType" factoryName="Python">
+      <module name="SparceBaseLine" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/../SparseBaseline/venv/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/graphs" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/graphs/multi_graphs.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python">
       <module name="SparceBaseLine" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -67,7 +90,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/engine/main.py" />
-      <option name="PARAMETERS" value="--num_steps 6000 --algo OAC --automatic_entropy_tuning" />
+      <option name="PARAMETERS" value="--num_steps 6000 --algo FIGAR" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -75,6 +98,10 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python.graph" />
+      <item itemvalue="Python.main" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" BundledDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
@@ -94,7 +121,7 @@
       <workItem from="1611881276171" duration="8358000" />
       <workItem from="1611958311752" duration="24030000" />
       <workItem from="1612280685848" duration="3096000" />
-      <workItem from="1612300356109" duration="7721000" />
+      <workItem from="1612300356109" duration="17380000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1608680582675</created>
@@ -208,7 +235,21 @@
       <option name="project" value="LOCAL" />
       <updated>1612312360719</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Fixed a bug in OAC">
+      <created>1612313248691</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1612313248691</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Fixed a bug in OAC">
+      <created>1612313920852</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1612313920852</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -324,11 +365,6 @@
           <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/engine/algorithms/DDPG_OU_NOISE/ddpg_ou_noise.py</url>
-          <line>25</line>
-          <option name="timeStamp" value="43" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/engine/algorithms/SAC/model.py</url>
           <line>51</line>
           <option name="timeStamp" value="48" />
@@ -345,8 +381,43 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/engine/algorithms/OAC/optimistic_exploration.py</url>
-          <line>32</line>
+          <line>31</line>
           <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/engine/algorithms/DDPG_OU_NOISE/ddpg_ou_noise.py</url>
+          <line>22</line>
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/engine/algorithms/DDPG_OU_NOISE/ddpg_ou_noise.py</url>
+          <line>15</line>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/engine/main.py</url>
+          <line>197</line>
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/engine/algorithms/FIGAR/figar.py</url>
+          <line>22</line>
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/engine/algorithms/FIGAR/figar.py</url>
+          <line>26</line>
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/engine/algorithms/DDPG_OU_NOISE/ddpg_ou_noise.py</url>
+          <line>52</line>
+          <option name="timeStamp" value="67" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/engine/utils/setting_tools.py</url>
+          <line>115</line>
+          <option name="timeStamp" value="68" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -359,8 +430,9 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/SparseBaseline1$graph.coverage" NAME="graph Coverage Results" MODIFIED="1612375228582" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/graphs" />
     <SUITE FILE_PATH="coverage/SparceBaseLine$main.coverage" NAME="main Coverage Results" MODIFIED="1581912687172" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/engine" />
     <SUITE FILE_PATH="coverage/SparseBaseline$main.coverage" NAME="main Coverage Results" MODIFIED="1611928621617" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/engine" />
-    <SUITE FILE_PATH="coverage/SparseBaseline1$main.coverage" NAME="main Coverage Results" MODIFIED="1612313216366" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/engine" />
+    <SUITE FILE_PATH="coverage/SparseBaseline1$main.coverage" NAME="main Coverage Results" MODIFIED="1612382796366" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/engine" />
   </component>
 </project>

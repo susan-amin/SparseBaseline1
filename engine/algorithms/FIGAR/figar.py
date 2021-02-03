@@ -21,7 +21,6 @@ class Actor_repeat(nn.Module):
         self.l2 = nn.Linear(400, 300)
         self.l3 = nn.Linear(300, action_dim)
         self.soft=nn.Softmax()
-        print(self.soft)
 
     def forward(self, x):
         x = F.relu(self.l1(x))
