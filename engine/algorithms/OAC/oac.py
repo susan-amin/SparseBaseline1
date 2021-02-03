@@ -30,4 +30,4 @@ class OAC(SAC):
         if (self.start_steps < self.counter_actions):
             return action.detach().cpu().numpy()[0]
         else:
-            return get_optimistic_exploration_action(ob_np=state.reshape(-1), std=std, mean=mean, critic=self.critic, hyper_params=hyper_params)
+            return get_optimistic_exploration_action(ob_np=state.reshape(-1).to(self.device), std=std, mean=mean.to(self.device), critic=self.critic, hyper_params=hyper_params)
