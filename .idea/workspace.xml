@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5acc3d49-96ae-4eb6-8d00-5677bf241615" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/SparceBaseLine.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SparceBaseLine.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -66,7 +64,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/engine/main.py" />
-      <option name="PARAMETERS" value="--num_steps 100000 -w 10 --seed 100 --sparse_reward --threshold_sparcity 5" />
+      <option name="PARAMETERS" value="--num_steps 6000 --algo OAC --automatic_entropy_tuning" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -92,6 +90,8 @@
       <workItem from="1611854802176" duration="3988000" />
       <workItem from="1611881276171" duration="8358000" />
       <workItem from="1611958311752" duration="24030000" />
+      <workItem from="1612280685848" duration="3096000" />
+      <workItem from="1612300356109" duration="6041000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1608680582675</created>
@@ -121,7 +121,77 @@
       <option name="project" value="LOCAL" />
       <updated>1612234390838</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Removed TODO notes">
+      <created>1612280754029</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1612280754029</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Removed CUDA and CPU condition">
+      <created>1612283938285</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1612283938288</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Fixed a the dtype of action-repeat tensor">
+      <created>1612287167431</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1612287167431</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Added another algorithm">
+      <created>1612304299493</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1612304299494</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Added another algorithm">
+      <created>1612304597489</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1612304597489</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Fixed a bug in OAC">
+      <created>1612305240727</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1612305240727</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Fixed a bug in OAC">
+      <created>1612308977451</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1612308977452</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Fixed a bug in OAC">
+      <created>1612309468309</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1612309468310</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Fixed a bug in OAC">
+      <created>1612311233896</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1612311233896</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Fixed a bug in OAC">
+      <created>1612311427618</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1612311427618</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,7 +202,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -141,7 +213,12 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first" />
     <MESSAGE value="Fixed bugs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed bugs" />
+    <MESSAGE value="Removed TODO notes" />
+    <MESSAGE value="Removed CUDA and CPU condition" />
+    <MESSAGE value="Fixed a the dtype of action-repeat tensor" />
+    <MESSAGE value="Added another algorithm" />
+    <MESSAGE value="Fixed a bug in OAC" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed a bug in OAC" />
   </component>
   <component name="WindowStateProjectService">
     <state x="336" y="125" key="#Deployment" timestamp="1611883740533">
@@ -230,19 +307,24 @@
           <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/engine/main.py</url>
-          <line>190</line>
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/engine/algorithms/FIGAR/figar.py</url>
-          <line>86</line>
-          <option name="timeStamp" value="42" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/engine/algorithms/DDPG_OU_NOISE/ddpg_ou_noise.py</url>
           <line>25</line>
           <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/engine/algorithms/SAC/model.py</url>
+          <line>51</line>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/engine/algorithms/SAC/sac.py</url>
+          <line>69</line>
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/engine/algorithms/OAC/optimistic_exploration.py</url>
+          <line>30</line>
+          <option name="timeStamp" value="52" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -257,6 +339,6 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/SparceBaseLine$main.coverage" NAME="main Coverage Results" MODIFIED="1581912687172" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/engine" />
     <SUITE FILE_PATH="coverage/SparseBaseline$main.coverage" NAME="main Coverage Results" MODIFIED="1611928621617" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/engine" />
-    <SUITE FILE_PATH="coverage/SparseBaseline1$main.coverage" NAME="main Coverage Results" MODIFIED="1612230744230" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/engine" />
+    <SUITE FILE_PATH="coverage/SparseBaseline1$main.coverage" NAME="main Coverage Results" MODIFIED="1612311000458" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/engine" />
   </component>
 </project>
