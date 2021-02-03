@@ -21,6 +21,7 @@ class Actor_repeat(nn.Module):
         self.l2 = nn.Linear(400, 300)
         self.l3 = nn.Linear(300, action_dim)
         self.soft=nn.Softmax()
+        print(self.soft)
 
     def forward(self, x):
         x = F.relu(self.l1(x))
@@ -55,7 +56,7 @@ class Figar(DDPG_Ou_Noise):
         # if self.expl_noise != 0:
         #     action1 = (action1 + np.random.normal(0, self.expl_noise, size=self.action_dim)).clip(
         #         self.action_low, self.action_high)
-        action1 = action1 + self.action_noise.noise().clip(self.action_low, self.action_high)
+        action1 = action1 + self.action_noise.noise()
         k = random.uniform(0, 1)
         if (k <= self.epsilon):
             action2 = random.randint(1, self.W)
