@@ -5,7 +5,7 @@ import math
 import numpy as np
 
 
-def get_optimistic_exploration_action(ob_np, std,mean, critic,qfs=None, hyper_params=None):
+def get_optimistic_exploration_action(ob_np, std,mean, critic,qfs=None, hyper_params=None, device = None):
     # assert ob_np.ndim == 1
     assert ob_np.dim() == 1
 
@@ -29,6 +29,7 @@ def get_optimistic_exploration_action(ob_np, std,mean, critic,qfs=None, hyper_pa
 
     # Get the upper bound of the Q estimate
     args = list(torch.unsqueeze(i, dim=0) for i in (ob, tanh_mu_T))
+    args = args.to(device = device)
     Q1,Q2 = critic(*args)
 
     mu_Q = (Q1 + Q2) / 2.0

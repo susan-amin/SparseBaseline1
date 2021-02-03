@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="5acc3d49-96ae-4eb6-8d00-5677bf241615" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/algorithms/OAC/oac.py" beforeDir="false" afterPath="$PROJECT_DIR$/engine/algorithms/OAC/oac.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/algorithms/OAC/optimistic_exploration.py" beforeDir="false" afterPath="$PROJECT_DIR$/engine/algorithms/OAC/optimistic_exploration.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/algorithms/SAC/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/engine/algorithms/SAC/model.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -91,7 +94,7 @@
       <workItem from="1611881276171" duration="8358000" />
       <workItem from="1611958311752" duration="24030000" />
       <workItem from="1612280685848" duration="3096000" />
-      <workItem from="1612300356109" duration="6041000" />
+      <workItem from="1612300356109" duration="7721000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1608680582675</created>
@@ -191,7 +194,21 @@
       <option name="project" value="LOCAL" />
       <updated>1612311427618</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Fixed a bug in OAC">
+      <created>1612311535171</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1612311535171</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Fixed a bug in OAC">
+      <created>1612312360718</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1612312360719</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -322,9 +339,14 @@
           <option name="timeStamp" value="49" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/engine/algorithms/OAC/oac.py</url>
+          <line>33</line>
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/engine/algorithms/OAC/optimistic_exploration.py</url>
-          <line>30</line>
-          <option name="timeStamp" value="52" />
+          <line>32</line>
+          <option name="timeStamp" value="55" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -339,6 +361,6 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/SparceBaseLine$main.coverage" NAME="main Coverage Results" MODIFIED="1581912687172" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/engine" />
     <SUITE FILE_PATH="coverage/SparseBaseline$main.coverage" NAME="main Coverage Results" MODIFIED="1611928621617" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/engine" />
-    <SUITE FILE_PATH="coverage/SparseBaseline1$main.coverage" NAME="main Coverage Results" MODIFIED="1612311000458" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/engine" />
+    <SUITE FILE_PATH="coverage/SparseBaseline1$main.coverage" NAME="main Coverage Results" MODIFIED="1612313216366" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/engine" />
   </component>
 </project>

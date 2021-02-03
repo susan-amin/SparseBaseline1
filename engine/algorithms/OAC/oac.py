@@ -17,6 +17,7 @@ class OAC(SAC):
                                   update_interval=update_interval)
         self.beta_UB = beta_UB
         self.delta = delta
+        self.device = device
 
     def select_action(self, state, tensor_board_writer=None, step_number=None):
         hyper_params = {'beta_UB': self.beta_UB,
@@ -30,4 +31,4 @@ class OAC(SAC):
         if (self.start_steps < self.counter_actions):
             return action.detach().cpu().numpy()[0]
         else:
-            return get_optimistic_exploration_action(ob_np=state.reshape(-1), std=std, mean=mean, critic=self.critic, hyper_params=hyper_params)
+            return get_optimistic_exploration_action(ob_np=state.reshape(-1), std=std, mean=mean, critic=self.critic, hyper_params=hyper_params, device = self.device)
