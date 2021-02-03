@@ -108,8 +108,10 @@ class Figar(DDPG_Ou_Noise):
         self.critic_optimizer.step()
 
         # Compute actor loss
-        act1 = self.actor_target(state)
-        act2 = self.actor_repeat_target(state)
+        # act1 = self.actor_target(state)
+        # act2 = self.actor_repeat_target(state)
+        act1 = self.actor(state)
+        act2 = self.actor_repeat(state)
         # if self.device == "cuda":
         #     act2 = act2.type(torch.cuda.FloatTensor)
         # else:
